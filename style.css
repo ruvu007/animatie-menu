@@ -2,7 +2,7 @@ body {
     background-color: royalblue;
     min-height: 100vh;
     margin: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: seashell;
 }
 
@@ -31,7 +31,7 @@ nav {
 }
 
 .nav__item {
-    margin-top: .1em;    
+    margin-top: .1em;
 }
 
 .nav__link {
@@ -53,19 +53,45 @@ nav {
     color: seashell;
 }
 
+/* verfijning van de animatie door de tekst van de link na te laten animeren */
+.nav__link--schuif-in .nav__tekst {
+    animation: ijl-na 2s forwards;
+}
+
+@keyframes ijl-na {
+    0% {
+        transform: translateX(-2em);
+    }
+
+    50% {
+        transform: translateX(0.6em);
+    }
+
+    75% {
+        transform: translateX(-0.3em);
+    }
+
+    100% {
+        transform: translateX(0em);
+    }
+}
+
 @media screen and (min-width: 600px) {
     .nav {
         flex-direction: row;
         width: 100vw;
     }
+
     .nav__item {
         margin-top: 0;
         margin-left: .1em;
         flex: 1 0 auto;
     }
+
     .nav__link {
         transform: translateY(-2em);
     }
+
     .nav__link--schuif-in {
         transform: translateY(0);
     }
@@ -84,7 +110,7 @@ main {
     width: 15vw;
     height: 15vw;
     transform: translateX(2em);
-    transition: transform 1s cubic-bezier(.25,0,.59,1.03);
+    transition: transform 1s cubic-bezier(.25, 0, .59, 1.03);
 }
 
 .vlakje__naar-rechts {
@@ -98,4 +124,3 @@ main {
 .fas.verberg {
     display: none;
 }
-
