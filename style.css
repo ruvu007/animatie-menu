@@ -72,7 +72,7 @@ nav {
     }
 
     100% {
-        transform: translateX(0em);
+        transform: translateX(0);
     }
 }
 
@@ -94,6 +94,15 @@ nav {
 
     .nav__link--schuif-in {
         transform: translateY(0);
+    }
+    .nav__link--schuif-in .nav__tekst {
+        animation: ijl-na-vert 2s forwards;
+    }
+    @keyframes ijl-na-vert {
+        0% { transform: translateY(-1em);}
+        50% { transform: translateY(0.1em);}
+        75% { transform: translateY(-0.05em);}
+        100% { transform: translateY(0);}
     }
 }
 
